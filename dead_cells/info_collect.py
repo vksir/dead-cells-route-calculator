@@ -6,6 +6,7 @@ import re
 import requests
 from lxml import etree
 
+from dead_cells.stages import STAGES
 from dead_cells.utils import Constants, Utils
 from dead_cells.translate import TRANSLATE
 
@@ -31,10 +32,10 @@ class BiomesCollector(object):
         self._save()
 
     def _parse_html(self):
+        self._parse_stage_mapping()
         self._parse_names()
         self._parse_raw_data()
         self._parse_data()
-        self._parse_stage_mapping()
 
     def _parse_stage_mapping(self):
         xpath = f"{self.STAGE_XPATH}/a//span[@class='toctext']/text()"
@@ -59,6 +60,7 @@ class BiomesCollector(object):
             scroll_info = self._parse_scroll_info(raw_scroll_info)
             exit_names = self._parse_exit_names(name, raw_exit_names)
             item.update({
+                'stage': STAGES.stage(name),
                 **scroll_info,
                 'exits': exit_names
             })
@@ -99,7 +101,7 @@ class BiomesCollector(object):
             'extra_power_for_4': r'(\d+) extra power \(4\+ \)',
             'dual_scroll': r'(\d+) Dual Scrolls',
             'scroll_fragment_for_3': r'(\d+)  \(3 \)',
-            'scroll_fragment_for_4': r'(\d+)  \(4 \)',
+            'scroll_fragment_for_4': r'(\d+)  \(4/5 \)',
         }
         scroll_info = {}
         for k, pattern in scroll_info_pattern.items():
@@ -127,7 +129,7 @@ class BiomesCollector(object):
         # 出口显示为 Seventh stage, 需要修改为 Astrolab
         # Exit: Seventh stage
         if name == 'Throne Room':
-            exit_names.append('Observatory')
+            exit_names.append('Astrolab')
 
         # 需要剔除 Fractured Shrines
         # Exits: Clock Tower, Undying ShoresFF (requires reaching the Undying Shores
@@ -183,7 +185,7 @@ class BiomesCollector(object):
             for i in range(len(data)):
                 new_data = {}
                 for k, v in data[i].items():
-                    if k in ['name', 'exits']:
+                    if k in ['name', 'exits', 'stage']:
                         v = TRANSLATE.trans(v, lang)
                     k = TRANSLATE.trans(k, lang)
                     new_data[k] = v

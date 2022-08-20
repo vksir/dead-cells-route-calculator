@@ -1,6 +1,7 @@
 [
     {
         "name": "Prisoners' Quarters",
+        "stage": "First stage",
         "power": 2,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -18,6 +19,7 @@
     },
     {
         "name": "Promenade of the Condemned",
+        "stage": "Second stages",
         "power": 1,
         "guaranteed": 0,
         "extra_power_for_1": 1,
@@ -26,7 +28,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Ramparts",
             "Prison Depths",
@@ -36,6 +38,7 @@
     },
     {
         "name": "Toxic Sewers",
+        "stage": "Second stages",
         "power": 1,
         "guaranteed": 0,
         "extra_power_for_1": 1,
@@ -44,7 +47,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 3,
         "exits": [
             "Ramparts",
             "Corrupted Prison",
@@ -53,6 +56,7 @@
     },
     {
         "name": "Dilapidated Arboretum",
+        "stage": "Second stages",
         "power": 1,
         "guaranteed": 0,
         "extra_power_for_1": 1,
@@ -61,7 +65,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Morass of the Banished",
             "Ramparts",
@@ -70,6 +74,7 @@
     },
     {
         "name": "Prison Depths",
+        "stage": "Optional stages",
         "power": 1,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -87,6 +92,7 @@
     },
     {
         "name": "Corrupted Prison",
+        "stage": "Optional stages",
         "power": 1,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -103,6 +109,7 @@
     },
     {
         "name": "Ramparts",
+        "stage": "Third stages",
         "power": 3,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -111,7 +118,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Black Bridge",
             "Insufferable Crypt"
@@ -119,6 +126,7 @@
     },
     {
         "name": "Ancient Sewers",
+        "stage": "Third stages",
         "power": 3,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -127,13 +135,14 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 3,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 5,
         "exits": [
             "Insufferable Crypt"
         ]
     },
     {
         "name": "Ossuary",
+        "stage": "Third stages",
         "power": 2,
         "guaranteed": 1,
         "extra_power_for_1": 0,
@@ -142,13 +151,14 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 3,
         "exits": [
             "Black Bridge"
         ]
     },
     {
         "name": "Morass of the Banished",
+        "stage": "Third stages",
         "power": 2,
         "guaranteed": 1,
         "extra_power_for_1": 0,
@@ -157,13 +167,14 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 4,
         "exits": [
             "Nest"
         ]
     },
     {
         "name": "Black Bridge",
+        "stage": "First bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -172,7 +183,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 3,
         "exits": [
             "Stilt Village",
             "Fractured Shrines",
@@ -181,6 +192,7 @@
     },
     {
         "name": "Insufferable Crypt",
+        "stage": "First bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -189,7 +201,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 3,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 5,
         "exits": [
             "Slumbering Sanctuary",
             "Graveyard"
@@ -197,6 +209,7 @@
     },
     {
         "name": "Nest",
+        "stage": "First bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -205,7 +218,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 3,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 4,
         "exits": [
             "Stilt Village",
             "Fractured Shrines",
@@ -214,6 +227,7 @@
     },
     {
         "name": "Stilt Village",
+        "stage": "Fourth stages",
         "power": 3,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -222,7 +236,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Clock Tower",
             "Undying Shores",
@@ -231,6 +245,7 @@
     },
     {
         "name": "Slumbering Sanctuary",
+        "stage": "Fourth stages",
         "power": 2,
         "guaranteed": 1,
         "extra_power_for_1": 0,
@@ -239,7 +254,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 3,
         "exits": [
             "Clock Tower",
             "Forgotten Sepulcher",
@@ -248,6 +263,7 @@
     },
     {
         "name": "Graveyard",
+        "stage": "Fourth stages",
         "power": 2,
         "guaranteed": 1,
         "extra_power_for_1": 0,
@@ -256,7 +272,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 3,
         "exits": [
             "Forgotten Sepulcher",
             "Cavern",
@@ -265,6 +281,7 @@
     },
     {
         "name": "Fractured Shrines",
+        "stage": "Fourth stages",
         "power": 1,
         "guaranteed": 1,
         "extra_power_for_1": 0,
@@ -273,7 +290,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Undying Shores",
             "Clock Tower",
@@ -282,6 +299,7 @@
     },
     {
         "name": "Clock Tower",
+        "stage": "Fifth stages",
         "power": 4,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -290,13 +308,14 @@
         "extra_power_for_4": 1,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 3,
         "exits": [
             "Clock Room"
         ]
     },
     {
         "name": "Forgotten Sepulcher",
+        "stage": "Fifth stages",
         "power": 3,
         "guaranteed": 1,
         "extra_power_for_1": 0,
@@ -305,7 +324,7 @@
         "extra_power_for_4": 1,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 3,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 4,
         "exits": [
             "Clock Room",
             "Guardian's Haven"
@@ -313,6 +332,7 @@
     },
     {
         "name": "Cavern",
+        "stage": "Fifth stages",
         "power": 4,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -321,7 +341,7 @@
         "extra_power_for_4": 1,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 4,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 5,
         "exits": [
             "Guardian's Haven",
             "Mausoleum"
@@ -329,6 +349,7 @@
     },
     {
         "name": "Undying Shores",
+        "stage": "Fifth stages",
         "power": 4,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -337,13 +358,14 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 3,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 4,
         "exits": [
             "Mausoleum"
         ]
     },
     {
         "name": "Clock Room",
+        "stage": "Second bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -352,7 +374,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "High Peak Castle",
             "Derelict Distillery",
@@ -361,6 +383,7 @@
     },
     {
         "name": "Guardian's Haven",
+        "stage": "Second bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -369,7 +392,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 3,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 4,
         "exits": [
             "High Peak Castle",
             "Derelict Distillery",
@@ -379,6 +402,7 @@
     },
     {
         "name": "Mausoleum",
+        "stage": "Second bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -387,7 +411,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 3,
         "exits": [
             "High Peak Castle",
             "Derelict Distillery",
@@ -396,6 +420,7 @@
     },
     {
         "name": "High Peak Castle",
+        "stage": "Sixth stages",
         "power": 2,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -404,13 +429,14 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Throne Room"
         ]
     },
     {
         "name": "Derelict Distillery",
+        "stage": "Sixth stages",
         "power": 2,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -419,7 +445,7 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Throne Room",
             "Lighthouse"
@@ -427,6 +453,7 @@
     },
     {
         "name": "Infested Shipwreck",
+        "stage": "Sixth stages",
         "power": 2,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -435,13 +462,14 @@
         "extra_power_for_4": 0,
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
-        "scroll_fragment_for_4": 0,
+        "scroll_fragment_for_4": 2,
         "exits": [
             "Lighthouse"
         ]
     },
     {
         "name": "Throne Room",
+        "stage": "Third bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -452,11 +480,12 @@
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
         "exits": [
-            "Observatory"
+            "Astrolab"
         ]
     },
     {
         "name": "Lighthouse",
+        "stage": "Third bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -472,6 +501,7 @@
     },
     {
         "name": "The Crown",
+        "stage": "Fourth bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -485,6 +515,7 @@
     },
     {
         "name": "The Bank",
+        "stage": "Special stages",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -498,6 +529,7 @@
     },
     {
         "name": "Astrolab",
+        "stage": "Seventh stage",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,
@@ -513,6 +545,7 @@
     },
     {
         "name": "Observatory",
+        "stage": "Fourth bosses",
         "power": 0,
         "guaranteed": 0,
         "extra_power_for_1": 0,

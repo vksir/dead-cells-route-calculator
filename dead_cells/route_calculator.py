@@ -65,15 +65,16 @@ class Way(UserList):
 
     @property
     def value_for_2(self):
-        return self.value + self.extra_power_for_2
+        return self.value_for_1 + self.extra_power_for_2
 
     @property
     def value_for_3(self):
-        return self.value + self.extra_power_for_3 + int(self.scroll_fragment_for_3 * 0.25)
+        return self.value_for_2 + self.extra_power_for_3 + int(self.scroll_fragment_for_3 * 0.25)
 
     @property
     def value_for_4(self):
-        return self.value + self.extra_power_for_4 + int(self.scroll_fragment_for_4 * 0.25)
+        return self.value_for_2 + self.extra_power_for_3 + self.extra_power_for_4 \
+               + int(self.scroll_fragment_for_4 * 0.25)
 
     @property
     def _power_data(self):
@@ -147,6 +148,12 @@ class RouteCalculator(object):
         self._save_routes_excel()
 
     def _save_routes_json(self):
+        self._entire_ways = sorted(self._entire_ways,
+                                   key=lambda way: [
+                                       -way.value_for_4,
+                                       way.dual_scroll,
+                                       way.guaranteed
+                                   ])
         self._data = [way.dict() for way in self._entire_ways]
         with open(Constants.ROUTES_JSON, 'w', encoding='utf-8') as f:
             json.dump(self._data, f, indent=4)

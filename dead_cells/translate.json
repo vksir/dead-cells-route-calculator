@@ -258,5 +258,9 @@
     "Special stages": {
         "en": "Special stages",
         "zh-cn": "特殊场景"
+    },
+    "stage": {
+        "en": "Stage",
+        "zh-cn": "阶段"
     }
 }
