@@ -40,15 +40,24 @@ class BiomesCollector(object):
         for item in self._data:
             name = item['name']
             TRANSLATE.add_word(name)
+        if not self._data:
+            return
+        for key in self._data[0]:
+            TRANSLATE.add_word(key)
         TRANSLATE.save()
 
     def _save_biomes_excel(self):
         for lang in self._languages:
             path = Constants.dead_cells_excel_path(lang)
             data = copy.deepcopy(self._data)
-            for item in data:
-                item['name'] = TRANSLATE.trans(item['name'], lang)
-                item['exits'] = TRANSLATE.trans(item['exits'], lang)
+            for i in range(len(data)):
+                new_data = {}
+                for k, v in data[i].items():
+                    if k in ['name', 'exits']:
+                        v = TRANSLATE.trans(v, lang)
+                    k = TRANSLATE.trans(k, lang)
+                    new_data[k] = v
+                data[i] = new_data
             Utils.write_excel(path, data, 'Biomes')
 
     def _parse_html(self):
@@ -98,6 +107,7 @@ class BiomesCollector(object):
         scroll_info_pattern = {
             'power': r'(\d+) Power',
             'guaranteed': r'\+(\d+) in a guaranteed',
+            'extra_power_for_1': r'(\d+) extra power \(1\+ \)',
             'extra_power_for_2': r'(\d+) extra power \(2\+ \)',
             'extra_power_for_3': r'(\d+) extra power \(3\+ \)',
             'extra_power_for_4': r'(\d+) extra power \(4\+ \)',

@@ -130,5 +130,73 @@
     "Astrolab": {
         "zh-cn": "观星实验室",
         "en": "Astrolab"
+    },
+    "name": {
+        "en": "Name",
+        "zh-cn": "场景"
+    },
+    "power": {
+        "en": "Power",
+        "zh-cn": "威力卷轴"
+    },
+    "guaranteed": {
+        "en": "Guaranteed",
+        "zh-cn": "诅咒箱"
+    },
+    "extra_power_for_1": {
+        "en": "Extra Power (1 BSC)",
+        "zh-cn": "额外威力卷轴（一细胞）"
+    },
+    "extra_power_for_2": {
+        "en": "Extra Power (2 BSC)",
+        "zh-cn": "额外威力卷轴（二细胞）"
+    },
+    "extra_power_for_3": {
+        "en": "Extra Power (3 BSC)",
+        "zh-cn": "额外威力卷轴（三细胞）"
+    },
+    "extra_power_for_4": {
+        "en": "Extra Power (4 BSC)",
+        "zh-cn": "额外威力卷轴（四细胞）"
+    },
+    "dual_scroll": {
+        "en": "Dual Scroll",
+        "zh-cn": "双色卷轴"
+    },
+    "scroll_fragment_for_3": {
+        "en": "Scroll Fragment (3 BSC)",
+        "zh-cn": "卷轴碎片（三细胞）"
+    },
+    "scroll_fragment_for_4": {
+        "en": "Scroll Fragment (4 BSC)",
+        "zh-cn": "卷轴碎片（四细胞）"
+    },
+    "exits": {
+        "en": "Exits",
+        "zh-cn": "出口"
+    },
+    "way": {
+        "en": "Way",
+        "zh-cn": "路线"
+    },
+    "value": {
+        "en": "value",
+        "zh-cn": "总卷轴"
+    },
+    "value_for_1": {
+        "en": "value_for_1",
+        "zh-cn": "总卷轴（一细胞）"
+    },
+    "value_for_2": {
+        "en": "value_for_2",
+        "zh-cn": "总卷轴（二细胞）"
+    },
+    "value_for_3": {
+        "en": "value_for_3",
+        "zh-cn": "总卷轴（三细胞）"
+    },
+    "value_for_4": {
+        "en": "value_for_4",
+        "zh-cn": "总卷轴（四细胞）"
     }
 }

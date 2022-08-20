@@ -9,6 +9,7 @@ class Node(BaseModel):
     name: str
     power: int
     guaranteed: int
+    extra_power_for_1: int
     extra_power_for_2: int
     extra_power_for_3: int
     extra_power_for_4: int

@@ -87,6 +87,7 @@ class Way(UserList):
             "scroll_fragment_for_3",
             "scroll_fragment_for_4",
             "value",
+            "value_for_1",
             "value_for_2",
             "value_for_3",
             "value_for_4"
@@ -122,6 +123,7 @@ class RouteCalculator(object):
 
     def _save(self):
         self._save_routes_json()
+        self._save_translate_json()
         self._save_routes_excel()
 
     def _save_routes_json(self):
@@ -129,12 +131,25 @@ class RouteCalculator(object):
         with open(Constants.ROUTES_JSON, 'w', encoding='utf-8') as f:
             json.dump(self._data, f, indent=4)
 
+    def _save_translate_json(self):
+        if not self._data:
+            return
+        for key in self._data[0]:
+            TRANSLATE.add_word(key)
+        TRANSLATE.save()
+
     def _save_routes_excel(self):
         for lang in self._languages:
             path = Constants.dead_cells_excel_path(lang)
             data = copy.deepcopy(self._data)
-            for item in data:
-                item['way'] = '--'.join(TRANSLATE.trans(item['way'], lang))
+            for i in range(len(data)):
+                new_data = {}
+                for k, v in data[i].items():
+                    if k in ['way']:
+                        v = '--'.join(TRANSLATE.trans(v, lang))
+                    k = TRANSLATE.trans(k, lang)
+                    new_data[k] = v
+                data[i] = new_data
             Utils.write_excel(path, data, 'Routes')
 
 
