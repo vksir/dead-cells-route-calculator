@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 .idea
+dead_cells/output/*

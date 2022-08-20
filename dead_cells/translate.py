@@ -2,8 +2,7 @@ import os
 import json
 from collections import UserDict
 
-from utils import Constants
-from utils import Singleton
+from dead_cells.utils import Constants
 
 
 class Translate(UserDict):
@@ -30,4 +29,4 @@ class Translate(UserDict):
             json.dump(self.data, f, indent=4, ensure_ascii=False)
 
 
-TRANS = Translate()
+TRANSLATE = Translate()

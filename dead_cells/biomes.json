@@ -466,6 +466,20 @@
         "exit": []
     },
     {
+        "name": "Astrolab",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Observatory"
+        ]
+    },
+    {
         "name": "Observatory",
         "power": 0,
         "guaranteed": 0,
