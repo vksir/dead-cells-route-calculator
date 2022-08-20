@@ -58,7 +58,7 @@ class BiomesCollector(object):
                     k = TRANSLATE.trans(k, lang)
                     new_data[k] = v
                 data[i] = new_data
-            Utils.write_excel(path, data, 'Biomes')
+            Utils.write_excel(path, data, TRANSLATE.trans('biomes', lang))
 
     def _parse_html(self):
         self._parse_names()

@@ -4,12 +4,13 @@ import pandas as pd
 
 
 class Constants(object):
-    TRANSLATE_JSON = './translate.json'
-    BIOMES_JSON = './biomes.json'
+    ROOT_PATH = os.path.dirname(__file__)
+    TRANSLATE_JSON = f'{ROOT_PATH}/translate.json'
+    BIOMES_JSON = f'{ROOT_PATH}/biomes.json'
 
-    BIOMES_HTML = './output/biomes.html'
-    ROUTES_JSON = './output/routes.json'
-    DEAD_CELLS_EXCEL = './output/dead_cells_%s.xlsx'
+    BIOMES_HTML = f'{ROOT_PATH}/output/biomes.html'
+    ROUTES_JSON = f'{ROOT_PATH}/output/routes.json'
+    DEAD_CELLS_EXCEL = f'{ROOT_PATH}/output/dead_cells_%s.xlsx'
 
     @classmethod
     def dead_cells_excel_path(cls, lang):

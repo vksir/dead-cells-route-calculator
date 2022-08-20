@@ -150,7 +150,7 @@ class RouteCalculator(object):
                     k = TRANSLATE.trans(k, lang)
                     new_data[k] = v
                 data[i] = new_data
-            Utils.write_excel(path, data, 'Routes')
+            Utils.write_excel(path, data, TRANSLATE.trans('routes', lang))
 
 
 def main():

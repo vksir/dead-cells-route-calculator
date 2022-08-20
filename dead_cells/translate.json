@@ -198,5 +198,13 @@
     "value_for_4": {
         "en": "value_for_4",
         "zh-cn": "总卷轴（四细胞）"
+    },
+    "biomes": {
+        "en": "Biomes",
+        "zh-cn": "地图"
+    },
+    "routes": {
+        "en": "Routes",
+        "zh-cn": "路线"
     }
 }
