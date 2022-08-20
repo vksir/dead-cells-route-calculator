@@ -82,6 +82,7 @@ class Way(UserList):
         for attr in [
             'power',
             "guaranteed",
+            'extra_power_for_1',
             "extra_power_for_2",
             "extra_power_for_3",
             "extra_power_for_4",
@@ -98,14 +99,6 @@ class Way(UserList):
             data[attr] = value
         return data
 
-    def dict(self):
-        data = {
-            'way': self.data,
-            **self._power_data,
-            **self._stage_data
-        }
-        return data
-
     @property
     def _stage_data(self):
         data = {}
@@ -114,6 +107,28 @@ class Way(UserList):
             if len(biomes) not in [0, 1]:
                 raise Exception('wrong stage mapping info')
             data[stage] = biomes[0] if biomes else ''
+        return data
+
+    def dict(self):
+        data = {
+            'way': self.data,
+            **self._power_data,
+            **self._stage_data
+        }
+        return data
+
+    def dict_for_5(self):
+        power = self.power + self.extra_power_for_1 + self.extra_power_for_2 \
+                + self.extra_power_for_3 + self.extra_power_for_4 \
+                + int(self.scroll_fragment_for_4 * 0.25)
+        data = {
+            'way': self.data,
+            'power': power,
+            "guaranteed": self.guaranteed,
+            "dual_scroll": self.dual_scroll,
+            "value": self.value_for_4,
+            **self._stage_data
+        }
         return data
 
 
@@ -148,12 +163,6 @@ class RouteCalculator(object):
         self._save_routes_excel()
 
     def _save_routes_json(self):
-        self._entire_ways = sorted(self._entire_ways,
-                                   key=lambda way: [
-                                       -way.value_for_4,
-                                       way.dual_scroll,
-                                       way.guaranteed
-                                   ])
         self._data = [way.dict() for way in self._entire_ways]
         with open(Constants.ROUTES_JSON, 'w', encoding='utf-8') as f:
             json.dump(self._data, f, indent=4)
@@ -166,9 +175,21 @@ class RouteCalculator(object):
         TRANSLATE.save()
 
     def _save_routes_excel(self):
+        self._write_route_excel(self._data, 'routes')
+
+        self._entire_ways = sorted(self._entire_ways,
+                                   key=lambda way: [
+                                       -way.value_for_4,
+                                       way.guaranteed,
+                                       way.dual_scroll,
+                                   ])
+        data = [way.dict_for_5() for way in self._entire_ways]
+        self._write_route_excel(data, 'best_routes_for_5')
+
+    def _write_route_excel(self, raw_data, sheet):
         for lang in self._languages:
             path = Constants.dead_cells_excel_path(lang)
-            data = copy.deepcopy(self._data)
+            data = copy.deepcopy(raw_data)
             for i in range(len(data)):
                 new_data = {}
                 for k, v in data[i].items():
@@ -179,8 +200,7 @@ class RouteCalculator(object):
                     k = TRANSLATE.trans(k, lang)
                     new_data[k] = v
                 data[i] = new_data
-            Utils.write_excel(path, data, TRANSLATE.trans('routes', lang))
-
+            Utils.write_excel(path, data, TRANSLATE.trans(sheet, lang))
 
 def main():
     rc = RouteCalculator()

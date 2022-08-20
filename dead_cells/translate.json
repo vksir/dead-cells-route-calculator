@@ -225,7 +225,7 @@
     },
     "First bosses": {
         "en": "First bosses",
-        "zh-cn": "第一个 Boss"
+        "zh-cn": "Boss 1"
     },
     "Fourth stages": {
         "en": "Fourth stages",
@@ -237,7 +237,7 @@
     },
     "Second bosses": {
         "en": "Second bosses",
-        "zh-cn": "第二个 Boss"
+        "zh-cn": "Boss 2"
     },
     "Sixth stages": {
         "en": "Sixth stages",
@@ -245,7 +245,7 @@
     },
     "Third bosses": {
         "en": "Third bosses",
-        "zh-cn": "第三个 Boss"
+        "zh-cn": "Boss 3"
     },
     "Seventh stage": {
         "en": "Seventh stage",
@@ -253,7 +253,7 @@
     },
     "Fourth bosses": {
         "en": "Fourth bosses",
-        "zh-cn": "第四个 Boss"
+        "zh-cn": "Boss 4"
     },
     "Special stages": {
         "en": "Special stages",
@@ -262,5 +262,9 @@
     "stage": {
         "en": "Stage",
         "zh-cn": "阶段"
+    },
+    "best_routes_for_5": {
+        "en": "Best Routes (5 BSC)",
+        "zh-cn": "最佳路线（五细胞）"
     }
 }
