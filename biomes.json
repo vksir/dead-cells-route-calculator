@@ -1,0 +1,480 @@
+[
+    {
+        "name": "Prisoners' Quarters",
+        "power": 2,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Promenade of the Condemned",
+            "Toxic Sewers",
+            "Dilapidated Arboretum"
+        ]
+    },
+    {
+        "name": "Promenade of the Condemned",
+        "power": 1,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Ramparts",
+            "Prison Depths",
+            "Ossuary",
+            "Morass of the Banished"
+        ]
+    },
+    {
+        "name": "Toxic Sewers",
+        "power": 1,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Ramparts",
+            "Corrupted Prison",
+            "Ancient Sewers"
+        ]
+    },
+    {
+        "name": "Dilapidated Arboretum",
+        "power": 1,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Morass of the Banished",
+            "Ramparts",
+            "Prison Depths"
+        ]
+    },
+    {
+        "name": "Prison Depths",
+        "power": 1,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Ossuary",
+            "Morass of the Banished",
+            "Ancient Sewers"
+        ]
+    },
+    {
+        "name": "Corrupted Prison",
+        "power": 1,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Ancient Sewers",
+            "Ramparts"
+        ]
+    },
+    {
+        "name": "Ramparts",
+        "power": 3,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Black Bridge",
+            "Insufferable Crypt"
+        ]
+    },
+    {
+        "name": "Ancient Sewers",
+        "power": 3,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 3,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Insufferable Crypt"
+        ]
+    },
+    {
+        "name": "Ossuary",
+        "power": 2,
+        "guaranteed": 1,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Black Bridge"
+        ]
+    },
+    {
+        "name": "Morass of the Banished",
+        "power": 2,
+        "guaranteed": 1,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Nest"
+        ]
+    },
+    {
+        "name": "Black Bridge",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Stilt Village",
+            "Fractured Shrines",
+            "Slumbering Sanctuary"
+        ]
+    },
+    {
+        "name": "Insufferable Crypt",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 3,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Slumbering Sanctuary",
+            "Graveyard"
+        ]
+    },
+    {
+        "name": "Nest",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 3,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Stilt Village",
+            "Fractured Shrines",
+            "Graveyard"
+        ]
+    },
+    {
+        "name": "Stilt Village",
+        "power": 3,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 1,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Clock Tower",
+            "Undying Shores",
+            "Forgotten Sepulcher"
+        ]
+    },
+    {
+        "name": "Slumbering Sanctuary",
+        "power": 2,
+        "guaranteed": 1,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 1,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Clock Tower",
+            "Forgotten Sepulcher",
+            "Cavern"
+        ]
+    },
+    {
+        "name": "Graveyard",
+        "power": 2,
+        "guaranteed": 1,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 1,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Forgotten Sepulcher",
+            "Cavern",
+            "Undying Shores"
+        ]
+    },
+    {
+        "name": "Fractured Shrines",
+        "power": 1,
+        "guaranteed": 1,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Undying Shores",
+            "Clock Tower",
+            "Forgotten Sepulcher"
+        ]
+    },
+    {
+        "name": "Clock Tower",
+        "power": 4,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 1,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Clock Room"
+        ]
+    },
+    {
+        "name": "Forgotten Sepulcher",
+        "power": 3,
+        "guaranteed": 1,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 1,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 3,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Clock Room",
+            "Guardian's Haven"
+        ]
+    },
+    {
+        "name": "Cavern",
+        "power": 4,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 1,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 4,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Guardian's Haven",
+            "Mausoleum"
+        ]
+    },
+    {
+        "name": "Undying Shores",
+        "power": 4,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 3,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Mausoleum"
+        ]
+    },
+    {
+        "name": "Clock Room",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "High Peak Castle",
+            "Derelict Distillery",
+            "Infested Shipwreck"
+        ]
+    },
+    {
+        "name": "Guardian's Haven",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 3,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "High Peak Castle",
+            "Derelict Distillery",
+            "Infested Shipwreck",
+            "Throne Room"
+        ]
+    },
+    {
+        "name": "Mausoleum",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 2,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "High Peak Castle",
+            "Derelict Distillery",
+            "Infested Shipwreck"
+        ]
+    },
+    {
+        "name": "High Peak Castle",
+        "power": 2,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Throne Room"
+        ]
+    },
+    {
+        "name": "Derelict Distillery",
+        "power": 2,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Throne Room",
+            "Lighthouse"
+        ]
+    },
+    {
+        "name": "Infested Shipwreck",
+        "power": 2,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 2,
+        "scroll_fragment_for_3": 1,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Lighthouse"
+        ]
+    },
+    {
+        "name": "Throne Room",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "Observatory"
+        ]
+    },
+    {
+        "name": "Lighthouse",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": [
+            "The Crown"
+        ]
+    },
+    {
+        "name": "The Crown",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": []
+    },
+    {
+        "name": "The Bank",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": []
+    },
+    {
+        "name": "Observatory",
+        "power": 0,
+        "guaranteed": 0,
+        "extra_power_for_2": 0,
+        "extra_power_for_3": 0,
+        "extra_power_for_4": 0,
+        "dual_scroll": 0,
+        "scroll_fragment_for_3": 0,
+        "scroll_fragment_for_4": 0,
+        "exit": []
+    }
+]
