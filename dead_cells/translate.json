@@ -201,10 +201,62 @@
     },
     "biomes": {
         "en": "Biomes",
-        "zh-cn": "地图"
+        "zh-cn": "群落"
     },
     "routes": {
         "en": "Routes",
         "zh-cn": "路线"
+    },
+    "First stage": {
+        "en": "First stage",
+        "zh-cn": "场景一"
+    },
+    "Second stages": {
+        "en": "Second stages",
+        "zh-cn": "场景二"
+    },
+    "Optional stages": {
+        "en": "Optional stages",
+        "zh-cn": "可选场景"
+    },
+    "Third stages": {
+        "en": "Third stages",
+        "zh-cn": "场景三"
+    },
+    "First bosses": {
+        "en": "First bosses",
+        "zh-cn": "第一个 Boss"
+    },
+    "Fourth stages": {
+        "en": "Fourth stages",
+        "zh-cn": "场景四"
+    },
+    "Fifth stages": {
+        "en": "Fifth stages",
+        "zh-cn": "场景五"
+    },
+    "Second bosses": {
+        "en": "Second bosses",
+        "zh-cn": "第二个 Boss"
+    },
+    "Sixth stages": {
+        "en": "Sixth stages",
+        "zh-cn": "场景六"
+    },
+    "Third bosses": {
+        "en": "Third bosses",
+        "zh-cn": "第三个 Boss"
+    },
+    "Seventh stage": {
+        "en": "Seventh stage",
+        "zh-cn": "场景七"
+    },
+    "Fourth bosses": {
+        "en": "Fourth bosses",
+        "zh-cn": "第四个 Boss"
+    },
+    "Special stages": {
+        "en": "Special stages",
+        "zh-cn": "特殊场景"
     }
 }

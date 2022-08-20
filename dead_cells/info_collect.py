@@ -13,6 +13,8 @@ from dead_cells.translate import TRANSLATE
 class BiomesCollector(object):
     DETAILS_TABLE_XPATH = "(//div[contains(text(),'Details')]/ancestor::table)"
     MORE_DETAIL_DIV_XPATH = "(//div[@align='center'][normalize-space()='Click to see more detailed information']/..)"
+    STAGE_XPATH = "(//div[@id='toc']//span[(contains(text(),'stage') or contains(text(),'bosses')) " \
+                  "and not(contains(text(),'Unused'))]/ancestor::li)"
     
     def __init__(self, force_req=False, lang=None):
         self._force_req = force_req
@@ -21,49 +23,33 @@ class BiomesCollector(object):
         self._names = []
         self._hided_names = []
         self._data = []
+        self._stages = {}
     
     def execute(self):
         self._html = self._req_html()
         self._parse_html()
         self._save()
-    
-    def _save(self):
-        self._save_biomes_json()
-        self._save_translate_json()
-        self._save_biomes_excel()
-
-    def _save_biomes_json(self):
-        with open(Constants.BIOMES_JSON, 'w', encoding='utf-8') as f:
-            json.dump(self._data, f, indent=4)
-
-    def _save_translate_json(self):
-        for item in self._data:
-            name = item['name']
-            TRANSLATE.add_word(name)
-        if not self._data:
-            return
-        for key in self._data[0]:
-            TRANSLATE.add_word(key)
-        TRANSLATE.save()
-
-    def _save_biomes_excel(self):
-        for lang in self._languages:
-            path = Constants.dead_cells_excel_path(lang)
-            data = copy.deepcopy(self._data)
-            for i in range(len(data)):
-                new_data = {}
-                for k, v in data[i].items():
-                    if k in ['name', 'exits']:
-                        v = TRANSLATE.trans(v, lang)
-                    k = TRANSLATE.trans(k, lang)
-                    new_data[k] = v
-                data[i] = new_data
-            Utils.write_excel(path, data, TRANSLATE.trans('biomes', lang))
 
     def _parse_html(self):
         self._parse_names()
         self._parse_raw_data()
         self._parse_data()
+        self._parse_stage_mapping()
+
+    def _parse_stage_mapping(self):
+        xpath = f"{self.STAGE_XPATH}/a//span[@class='toctext']/text()"
+        stages = self._html.xpath(xpath)
+        for i, stage in enumerate(stages):
+            xpath = f"{self.STAGE_XPATH}[{i + 1}]/ul//span[@class='toctext']/text()"
+            biomes = self._html.xpath(xpath)
+
+            # 观星实验室和观星台被折叠，需额外添加
+            if stage == 'Seventh stage':
+                biomes.append('Astrolab')
+            if stage == 'Fourth bosses':
+                biomes.append('Observatory')
+
+            self._stages[stage] = biomes
 
     def _parse_data(self):
         for item in self._data:
@@ -168,6 +154,45 @@ class BiomesCollector(object):
                 f.write(res.text)
         with open(Constants.BIOMES_HTML, 'r', encoding='utf-8') as f:
             return etree.HTML(f.read())
+
+    def _save(self):
+        self._save_biomes_json()
+        self._save_translate_json()
+        self._save_biomes_excel()
+        self._save_stages_json()
+
+    def _save_biomes_json(self):
+        with open(Constants.BIOMES_JSON, 'w', encoding='utf-8') as f:
+            json.dump(self._data, f, indent=4)
+
+    def _save_translate_json(self):
+        for item in self._data:
+            name = item['name']
+            TRANSLATE.add_word(name)
+        if self._data:
+            for key in self._data[0]:
+                TRANSLATE.add_word(key)
+        for key in self._stages:
+            TRANSLATE.add_word(key)
+        TRANSLATE.save()
+
+    def _save_biomes_excel(self):
+        for lang in self._languages:
+            path = Constants.dead_cells_excel_path(lang)
+            data = copy.deepcopy(self._data)
+            for i in range(len(data)):
+                new_data = {}
+                for k, v in data[i].items():
+                    if k in ['name', 'exits']:
+                        v = TRANSLATE.trans(v, lang)
+                    k = TRANSLATE.trans(k, lang)
+                    new_data[k] = v
+                data[i] = new_data
+            Utils.write_excel(path, data, TRANSLATE.trans('biomes', lang))
+
+    def _save_stages_json(self):
+        with open(Constants.STAGES_JSON, 'w', encoding='utf-8') as f:
+            json.dump(self._stages, f, indent=4)
 
 
 def main():

@@ -14,7 +14,7 @@ class Translate(UserDict):
             return self.get(word, {}).get(lang) or word
         elif isinstance(word, list):
             return [self.trans(w, lang) for w in word]
-        raise Exception(f'invalid word: {word}')
+        return word
 
     def en(self, word):
         return self.trans(word, 'en')

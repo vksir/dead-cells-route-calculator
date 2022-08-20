@@ -1,0 +1,61 @@
+{
+    "First stage": [
+        "Prisoners' Quarters"
+    ],
+    "Second stages": [
+        "Promenade of the Condemned",
+        "Toxic Sewers",
+        "Dilapidated Arboretum"
+    ],
+    "Optional stages": [
+        "Prison Depths",
+        "Corrupted Prison"
+    ],
+    "Third stages": [
+        "Ramparts",
+        "Ancient Sewers",
+        "Ossuary",
+        "Morass of the Banished"
+    ],
+    "First bosses": [
+        "Black Bridge",
+        "Insufferable Crypt",
+        "Nest"
+    ],
+    "Fourth stages": [
+        "Stilt Village",
+        "Slumbering Sanctuary",
+        "Graveyard",
+        "Fractured Shrines"
+    ],
+    "Fifth stages": [
+        "Clock Tower",
+        "Forgotten Sepulcher",
+        "Cavern",
+        "Undying Shores"
+    ],
+    "Second bosses": [
+        "Clock Room",
+        "Guardian's Haven",
+        "Mausoleum"
+    ],
+    "Sixth stages": [
+        "High Peak Castle",
+        "Derelict Distillery",
+        "Infested Shipwreck"
+    ],
+    "Third bosses": [
+        "Throne Room",
+        "Lighthouse"
+    ],
+    "Seventh stage": [
+        "Astrolab"
+    ],
+    "Fourth bosses": [
+        "The Crown",
+        "Observatory"
+    ],
+    "Special stages": [
+        "The Bank"
+    ]
+}

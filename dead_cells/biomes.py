@@ -1,5 +1,4 @@
 import json
-from pydantic import Field
 from pydantic import BaseModel
 
 from dead_cells.utils import Constants

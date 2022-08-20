@@ -7,6 +7,7 @@ class Constants(object):
     ROOT_PATH = os.path.dirname(__file__)
     TRANSLATE_JSON = f'{ROOT_PATH}/translate.json'
     BIOMES_JSON = f'{ROOT_PATH}/biomes.json'
+    STAGES_JSON = f'{ROOT_PATH}/stages.json'
 
     BIOMES_HTML = f'{ROOT_PATH}/output/biomes.html'
     ROUTES_JSON = f'{ROOT_PATH}/output/routes.json'

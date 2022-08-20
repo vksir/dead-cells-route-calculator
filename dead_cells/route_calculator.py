@@ -5,7 +5,9 @@ from collections import UserList
 
 from dead_cells.biomes import BIOMES
 from dead_cells.translate import TRANSLATE
-from dead_cells.utils import Constants, Utils
+from dead_cells.stages import STAGES
+from dead_cells.utils import Constants
+from dead_cells.utils import Utils
 
 
 class Way(UserList):
@@ -73,10 +75,9 @@ class Way(UserList):
     def value_for_4(self):
         return self.value + self.extra_power_for_4 + int(self.scroll_fragment_for_4 * 0.25)
 
-    def dict(self):
-        data = {
-            'way': self.data
-        }
+    @property
+    def _power_data(self):
+        data = {}
         for attr in [
             'power',
             "guaranteed",
@@ -96,12 +97,31 @@ class Way(UserList):
             data[attr] = value
         return data
 
+    def dict(self):
+        data = {
+            'way': self.data,
+            **self._power_data,
+            **self._stage_data
+        }
+        return data
+
+    @property
+    def _stage_data(self):
+        data = {}
+        for stage, biomes in STAGES.items():
+            biomes = list(set(self) & set(biomes))
+            if len(biomes) not in [0, 1]:
+                raise Exception('wrong stage mapping info')
+            data[stage] = biomes[0] if biomes else ''
+        return data
+
 
 class RouteCalculator(object):
     def __init__(self, lang=None):
         self._languages = lang or ['en', 'zh-cn']
         self._entire_ways = []
         self._data = []
+        self._stage_data = []
 
     def execute(self):
         self._calc_all_ways()
@@ -147,6 +167,8 @@ class RouteCalculator(object):
                 for k, v in data[i].items():
                     if k in ['way']:
                         v = '--'.join(TRANSLATE.trans(v, lang))
+                    else:
+                        v = TRANSLATE.trans(v, lang)
                     k = TRANSLATE.trans(k, lang)
                     new_data[k] = v
                 data[i] = new_data
