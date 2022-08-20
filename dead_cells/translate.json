@@ -1,101 +1,134 @@
 {
     "Prisoners' Quarters": {
-        "zh-cn": "被囚者的牢房"
+        "zh-cn": "被囚者的牢房",
+        "en": "Prisoners' Quarters"
     },
     "Promenade of the Condemned": {
-        "zh-cn": "有罪者的大道"
+        "zh-cn": "有罪者的大道",
+        "en": "Promenade of the Condemned"
     },
     "Toxic Sewers": {
-        "zh-cn": "猛毒下水道"
+        "zh-cn": "猛毒下水道",
+        "en": "Toxic Sewers"
     },
     "Dilapidated Arboretum": {
-        "zh-cn": "荒废植物园"
+        "zh-cn": "荒废植物园",
+        "en": "Dilapidated Arboretum"
     },
     "Prison Depths": {
-        "zh-cn": "监狱深处"
+        "zh-cn": "监狱深处",
+        "en": "Prison Depths"
     },
     "Corrupted Prison": {
-        "zh-cn": "腐化牢房"
+        "zh-cn": "腐化牢房",
+        "en": "Corrupted Prison"
     },
     "Ramparts": {
-        "zh-cn": "壁垒"
+        "zh-cn": "壁垒",
+        "en": "Ramparts"
     },
     "Ancient Sewers": {
-        "zh-cn": "旧下水道"
+        "zh-cn": "旧下水道",
+        "en": "Ancient Sewers"
     },
     "Ossuary": {
-        "zh-cn": "藏骨堂"
+        "zh-cn": "藏骨堂",
+        "en": "Ossuary"
     },
     "Morass of the Banished": {
-        "zh-cn": "被弃者沼泽"
+        "zh-cn": "被弃者沼泽",
+        "en": "Morass of the Banished"
     },
     "Black Bridge": {
-        "zh-cn": "黑色大桥"
+        "zh-cn": "黑色大桥",
+        "en": "Black Bridge"
     },
     "Insufferable Crypt": {
-        "zh-cn": "作呕地窖"
+        "zh-cn": "作呕地窖",
+        "en": "Insufferable Crypt"
     },
     "Nest": {
-        "zh-cn": "巢穴"
+        "zh-cn": "巢穴",
+        "en": "Nest"
     },
     "Stilt Village": {
-        "zh-cn": "雾萦港湾"
+        "zh-cn": "雾萦港湾",
+        "en": "Stilt Village"
     },
     "Slumbering Sanctuary": {
-        "zh-cn": "沉睡的庇护所"
+        "zh-cn": "沉睡的庇护所",
+        "en": "Slumbering Sanctuary"
     },
     "Graveyard": {
-        "zh-cn": "墓地"
+        "zh-cn": "墓地",
+        "en": "Graveyard"
     },
     "Fractured Shrines": {
-        "zh-cn": "崩坏神庙"
+        "zh-cn": "崩坏神庙",
+        "en": "Fractured Shrines"
     },
     "Clock Tower": {
-        "zh-cn": "钟楼"
+        "zh-cn": "钟楼",
+        "en": "Clock Tower"
     },
     "Forgotten Sepulcher": {
-        "zh-cn": "被遗忘的陵墓"
+        "zh-cn": "被遗忘的陵墓",
+        "en": "Forgotten Sepulcher"
     },
     "Cavern": {
-        "zh-cn": "山洞"
+        "zh-cn": "山洞",
+        "en": "Cavern"
     },
     "Undying Shores": {
-        "zh-cn": "不死海滩"
+        "zh-cn": "不死海滩",
+        "en": "Undying Shores"
     },
     "Clock Room": {
-        "zh-cn": "时钟室"
+        "zh-cn": "时钟室",
+        "en": "Clock Room"
     },
     "Guardian's Haven": {
-        "zh-cn": "守护者的居所"
+        "zh-cn": "守护者的居所",
+        "en": "Guardian's Haven"
     },
     "Mausoleum": {
-        "zh-cn": "阴森墓园"
+        "zh-cn": "阴森墓园",
+        "en": "Mausoleum"
     },
     "High Peak Castle": {
-        "zh-cn": "山巅城堡"
+        "zh-cn": "山巅城堡",
+        "en": "High Peak Castle"
     },
     "Derelict Distillery": {
-        "zh-cn": "废弃酿酒厂"
+        "zh-cn": "废弃酿酒厂",
+        "en": "Derelict Distillery"
     },
     "Infested Shipwreck": {
-        "zh-cn": "感染船骸"
+        "zh-cn": "感染船骸",
+        "en": "Infested Shipwreck"
     },
     "Throne Room": {
-        "zh-cn": "王座之间"
+        "zh-cn": "王座之间",
+        "en": "Throne Room"
     },
     "Lighthouse": {
-        "zh-cn": "灯塔"
+        "zh-cn": "灯塔",
+        "en": "Lighthouse"
     },
     "The Crown": {
-        "zh-cn": "塔顶"
+        "zh-cn": "塔顶",
+        "en": "The Crown"
     },
     "The Bank": {
-        "zh-cn": "银行"
+        "zh-cn": "银行",
+        "en": "The Bank"
     },
     "Observatory": {
-        "zh-cn": "观星台"
+        "zh-cn": "观星台",
+        "en": "Observatory"
     },
     "Astrolab": {
-        "zh-cn": "观星实验室"
+        "zh-cn": "观星实验室",
+        "en": "Astrolab"
     }
 }

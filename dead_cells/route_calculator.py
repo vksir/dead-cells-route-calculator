@@ -1,19 +1,17 @@
 import copy
+import json
 import queue
 from collections import UserList
 
-from dead_cells.translate import TRANSLATE
 from dead_cells.biomes import BIOMES
+from dead_cells.translate import TRANSLATE
+from dead_cells.utils import Constants, Utils
 
 
 class Way(UserList):
     @property
-    def cur_node_name(self):
-        return self[-1]
-
-    @property
     def next_node_names(self):
-        return BIOMES.next_node_names(self.cur_node_name)
+        return BIOMES.next_node_names(self[-1])
 
     @property
     def nodes(self):
@@ -26,6 +24,10 @@ class Way(UserList):
     @property
     def guaranteed(self):
         return sum(node.guaranteed for node in self.nodes)
+
+    @property
+    def extra_power_for_1(self):
+        return sum(node.extra_power_for_1 for node in self.nodes)
 
     @property
     def extra_power_for_2(self):
@@ -56,38 +58,89 @@ class Way(UserList):
         return self.power + self.guaranteed + self.dual_scroll
 
     @property
+    def value_for_1(self):
+        return self.value + self.extra_power_for_1
+
+    @property
     def value_for_2(self):
         return self.value + self.extra_power_for_2
 
     @property
     def value_for_3(self):
-        return self.value_for_2 + self.extra_power_for_3 + self.scroll_fragment_for_3 * 0.25
+        return self.value + self.extra_power_for_3 + int(self.scroll_fragment_for_3 * 0.25)
 
     @property
     def value_for_4(self):
-        return self.value_for_3 + self.extra_power_for_4 + self.scroll_fragment_for_4 * 0.25
+        return self.value + self.extra_power_for_4 + int(self.scroll_fragment_for_4 * 0.25)
+
+    def dict(self):
+        data = {
+            'way': self.data
+        }
+        for attr in [
+            'power',
+            "guaranteed",
+            "extra_power_for_2",
+            "extra_power_for_3",
+            "extra_power_for_4",
+            "dual_scroll",
+            "scroll_fragment_for_3",
+            "scroll_fragment_for_4",
+            "value",
+            "value_for_2",
+            "value_for_3",
+            "value_for_4"
+        ]:
+            value = getattr(self, attr)
+            data[attr] = value
+        return data
+
+
+class RouteCalculator(object):
+    def __init__(self, lang=None):
+        self._languages = lang or ['en', 'zh-cn']
+        self._entire_ways = []
+        self._data = []
+
+    def execute(self):
+        self._calc_all_ways()
+        self._save()
+
+    def _calc_all_ways(self):
+        ways = queue.Queue()
+        ways.put(Way(["Prisoners' Quarters"]))
+        while not ways.empty():
+            way = ways.get()
+            next_nodes = way.next_node_names
+            if not next_nodes:
+                self._entire_ways.append(way)
+                continue
+            for next_node in next_nodes:
+                tmp_way = copy.deepcopy(way)
+                tmp_way.append(next_node)
+                ways.put(tmp_way)
+
+    def _save(self):
+        self._save_routes_json()
+        self._save_routes_excel()
+
+    def _save_routes_json(self):
+        self._data = [way.dict() for way in self._entire_ways]
+        with open(Constants.ROUTES_JSON, 'w', encoding='utf-8') as f:
+            json.dump(self._data, f, indent=4)
+
+    def _save_routes_excel(self):
+        for lang in self._languages:
+            path = Constants.dead_cells_excel_path(lang)
+            data = copy.deepcopy(self._data)
+            for item in data:
+                item['way'] = '--'.join(TRANSLATE.trans(item['way'], lang))
+            Utils.write_excel(path, data, 'Routes')
 
 
 def main():
-    entire_ways = []
-    ways = queue.Queue()
-    ways.put(Way(["Prisoners' Quarters"]))
-    while not ways.empty():
-        way = ways.get()
-        next_nodes = way.next_node_names
-        if not next_nodes:
-            entire_ways.append(way)
-            continue
-        for next_node in next_nodes:
-            tmp_way = copy.deepcopy(way)
-            tmp_way.append(next_node)
-            ways.put(tmp_way)
-
-    entire_ways = sorted(entire_ways, key=lambda item: item.value_for_4, reverse=True)
-    for way in entire_ways:
-
-        print('-'.join(TRANSLATE.zh_cn(node_name) for node_name in way), end=', ')
-        print(f'value={way.value_for_4}')
+    rc = RouteCalculator()
+    rc.execute()
 
 
 if __name__ == '__main__':

@@ -1,12 +1,12 @@
+import copy
 import json
 import os
 import re
 
 import requests
 from lxml import etree
-import pandas as pd
 
-from dead_cells.utils import Constants
+from dead_cells.utils import Constants, Utils
 from dead_cells.translate import TRANSLATE
 
 
@@ -14,8 +14,9 @@ class BiomesCollector(object):
     DETAILS_TABLE_XPATH = "(//div[contains(text(),'Details')]/ancestor::table)"
     MORE_DETAIL_DIV_XPATH = "(//div[@align='center'][normalize-space()='Click to see more detailed information']/..)"
     
-    def __init__(self, force_req=False):        
+    def __init__(self, force_req=False, lang=None):
         self._force_req = force_req
+        self._languages = lang or ['en', 'zh-cn']
         self._html = None
         self._names = []
         self._hided_names = []
@@ -42,11 +43,13 @@ class BiomesCollector(object):
         TRANSLATE.save()
 
     def _save_biomes_excel(self):
-        pd.DataFrame(self._data).to_excel(Constants.BIOMES_EXCEL)
-        for item in self._data:
-            item['name'] = TRANSLATE.zh_cn(item['name'])
-            item['exit'] = [TRANSLATE.zh_cn(exit_name) for exit_name in item['exit']]
-        pd.DataFrame(self._data).to_excel(Constants.BIOMES_EXCEL_ZH_CN)
+        for lang in self._languages:
+            path = Constants.dead_cells_excel_path(lang)
+            data = copy.deepcopy(self._data)
+            for item in data:
+                item['name'] = TRANSLATE.trans(item['name'], lang)
+                item['exits'] = TRANSLATE.trans(item['exits'], lang)
+            Utils.write_excel(path, data, 'Biomes')
 
     def _parse_html(self):
         self._parse_names()
@@ -62,7 +65,7 @@ class BiomesCollector(object):
             exit_names = self._parse_exit_names(name, raw_exit_names)
             item.update({
                 **scroll_info,
-                'exit': exit_names
+                'exits': exit_names
             })
 
     def _parse_raw_data(self):

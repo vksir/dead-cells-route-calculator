@@ -1,4 +1,5 @@
 import json
+from pydantic import Field
 from pydantic import BaseModel
 
 from dead_cells.utils import Constants
@@ -15,22 +16,6 @@ class Node(BaseModel):
     scroll_fragment_for_3: int
     scroll_fragment_for_4: int
 
-    @property
-    def value(self):
-        return self.power + self.guaranteed + self.dual_scroll
-
-    @property
-    def value_for_2(self):
-        return self.value + self.extra_power_for_2
-
-    @property
-    def value_for_3(self):
-        return self.value_for_2 + self.extra_power_for_3 + self.scroll_fragment_for_3 * 0.25
-
-    @property
-    def value_for_4(self):
-        return self.value_for_3 + self.extra_power_for_4 + self.scroll_fragment_for_4 * 0.25
-
 
 class Biomes:
     def __init__(self):
@@ -40,7 +25,7 @@ class Biomes:
             for item in data
         }
         self._route_mapping = {
-            item['name']: item['exit']
+            item['name']: item['exits']
             for item in data
         }
 

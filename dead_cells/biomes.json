@@ -9,7 +9,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Promenade of the Condemned",
             "Toxic Sewers",
             "Dilapidated Arboretum"
@@ -25,7 +25,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Ramparts",
             "Prison Depths",
             "Ossuary",
@@ -42,7 +42,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Ramparts",
             "Corrupted Prison",
             "Ancient Sewers"
@@ -58,7 +58,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Morass of the Banished",
             "Ramparts",
             "Prison Depths"
@@ -74,7 +74,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Ossuary",
             "Morass of the Banished",
             "Ancient Sewers"
@@ -90,7 +90,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Ancient Sewers",
             "Ramparts"
         ]
@@ -105,7 +105,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Black Bridge",
             "Insufferable Crypt"
         ]
@@ -120,7 +120,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 3,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Insufferable Crypt"
         ]
     },
@@ -134,7 +134,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Black Bridge"
         ]
     },
@@ -148,7 +148,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Nest"
         ]
     },
@@ -162,7 +162,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Stilt Village",
             "Fractured Shrines",
             "Slumbering Sanctuary"
@@ -178,7 +178,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 3,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Slumbering Sanctuary",
             "Graveyard"
         ]
@@ -193,7 +193,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 3,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Stilt Village",
             "Fractured Shrines",
             "Graveyard"
@@ -209,7 +209,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Clock Tower",
             "Undying Shores",
             "Forgotten Sepulcher"
@@ -225,7 +225,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Clock Tower",
             "Forgotten Sepulcher",
             "Cavern"
@@ -241,7 +241,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Forgotten Sepulcher",
             "Cavern",
             "Undying Shores"
@@ -257,7 +257,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Undying Shores",
             "Clock Tower",
             "Forgotten Sepulcher"
@@ -273,7 +273,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Clock Room"
         ]
     },
@@ -287,7 +287,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 3,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Clock Room",
             "Guardian's Haven"
         ]
@@ -302,7 +302,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 4,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Guardian's Haven",
             "Mausoleum"
         ]
@@ -317,7 +317,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 3,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Mausoleum"
         ]
     },
@@ -331,7 +331,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "High Peak Castle",
             "Derelict Distillery",
             "Infested Shipwreck"
@@ -347,7 +347,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 3,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "High Peak Castle",
             "Derelict Distillery",
             "Infested Shipwreck",
@@ -364,7 +364,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 2,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "High Peak Castle",
             "Derelict Distillery",
             "Infested Shipwreck"
@@ -380,7 +380,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Throne Room"
         ]
     },
@@ -394,7 +394,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Throne Room",
             "Lighthouse"
         ]
@@ -409,7 +409,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 1,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Lighthouse"
         ]
     },
@@ -423,7 +423,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Observatory"
         ]
     },
@@ -437,7 +437,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "The Crown"
         ]
     },
@@ -451,7 +451,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": []
+        "exits": []
     },
     {
         "name": "The Bank",
@@ -463,7 +463,7 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": []
+        "exits": []
     },
     {
         "name": "Astrolab",
@@ -475,7 +475,7 @@
         "dual_scroll": 2,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": [
+        "exits": [
             "Observatory"
         ]
     },
@@ -489,6 +489,6 @@
         "dual_scroll": 0,
         "scroll_fragment_for_3": 0,
         "scroll_fragment_for_4": 0,
-        "exit": []
+        "exits": []
     }
 ]
